@@ -1,7 +1,7 @@
 # LoadingMask
 
 一个带有动态Loading的遮罩层 <br/>
-A Vue loading mask
+A Vue variable loading mask
 
 ![image-20211116112215815](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/202111161127946.png)
 
@@ -12,5 +12,5 @@ A Vue loading mask
      :maskVisable="maskVisable" // Boolean
      />
 
-安装：npm i vue-loading-mask<br/>
-install: npm i vue-loading-mask
+安装：npm i variable-loading-mask<br/>
+install: npm i variable-loading-mask
