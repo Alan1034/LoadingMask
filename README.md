@@ -17,7 +17,8 @@ A Vue variable loading mask
 
 组件用法：
 
-     import LoadingMask from "variable-loading-mask";
+    import {LoadingMask} from "variable-loading-mask";
+    import 'variable-loading-mask/style'
     
      <LoadingMask 
      :text="percentage"  // [String, Number]
@@ -28,6 +29,7 @@ A Vue variable loading mask
 
 ```
 import { LoadingMaskIns } from 'variable-loading-mask';
+import 'variable-loading-mask/style'
 
 const mask = LoadingMaskIns({ text: 'percentage' });
 mask.show();
