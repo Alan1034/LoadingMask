@@ -15,14 +15,25 @@ A Vue variable loading mask
 
 ![image-20211116115258955](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/202111161152173.png)
 
-用法：
+组件用法：
 
      import LoadingMask from "variable-loading-mask";
-
+    
      <LoadingMask 
      :text="percentage"  // [String, Number]
      :maskVisable="maskVisable" // Boolean
      />
+
+函数式调用：
+
+```
+import { LoadingMaskIns } from 'variable-loading-mask';
+
+const mask = LoadingMaskIns({ text: 'percentage' });
+mask.show();
+mask.setText("percentage+n")
+mask.close();
+```
 
 安装：npm i variable-loading-mask<br/>
 install: npm i variable-loading-mask

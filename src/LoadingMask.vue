@@ -1,7 +1,7 @@
 <!--
  * @Author: 陈德立*******419287484@qq.com
  * @Date: 2021-11-15 18:23:09
- * @LastEditTime: 2024-09-12 18:04:24
+ * @LastEditTime: 2024-09-13 10:34:23
  * @LastEditors: 陈德立*******419287484@qq.com
  * @Github: https://github.com/Alan1034
  * @Description: LoadingMask
@@ -10,20 +10,22 @@
 -->
 
 <template>
-  <div class="mask" v-if="maskVisable">
+  <div class="mask" v-if="visable">
     <div class="loader">
       <div class="loading-1"></div>
-      <div class="loading-2">{{ text }}</div>
+      <div class="loading-2">{{ loadingText }}</div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
+const loadingText = ref<string | number>("")
+const visable = ref<boolean>(false)
 import {
-  //ref, reactive, defineComponent,
-  defineExpose, defineProps, onUnmounted
+  //reactive, defineComponent,
+  defineExpose, defineProps, onUnmounted, watch, ref,
 } from 'vue-demi'
-const { text, maskVisable, onDestroy } = defineProps({
+const props = defineProps({
   text: {
     type: [String, Number],
     default: "",
@@ -37,18 +39,39 @@ const { text, maskVisable, onDestroy } = defineProps({
     default: () => { },
   },
 })
+const {// text, maskVisable, 
+  onDestroy } = props
+watch(
+  () => props.text, (val, oldVal) => {
+    loadingText.value = val
+  }, {
+  immediate: true
+}
+)
+watch(
+  () => props.maskVisable, (val, oldVal) => {
+    visable.value = val
+  }, {
+  immediate: true
+}
+)
+
 const show = () => {
-  console.log("show")
+  visable.value = true
 }
 const close = () => {
-  console.log("close")
+  visable.value = false
+}
+const setText = (text: string | number) => {
+  loadingText.value = text
 }
 onUnmounted(() => {
   onDestroy()
 })
 defineExpose({
   show,
-  close
+  close,
+  setText
 })
 </script>
 

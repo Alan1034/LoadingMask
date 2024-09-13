@@ -27,6 +27,7 @@ const createLoadingMask = (options) => {
     //   : null
   );
   render(vnode, container)
+  document.body.appendChild(container)
   const vm = vnode.component
   const handler= {
     close: () => {
@@ -34,6 +35,9 @@ const createLoadingMask = (options) => {
     },
     show: () => {
       vm.exposed.show()
+    },
+    setText: (text: string | number) => {
+      vm.exposed.setText(text)
     },
   }
   const instance = {
