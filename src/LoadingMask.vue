@@ -1,7 +1,7 @@
 <!--
  * @Author: 陈德立*******419287484@qq.com
  * @Date: 2021-11-15 18:23:09
- * @LastEditTime: 2024-09-13 10:34:23
+ * @LastEditTime: 2024-10-14 10:59:04
  * @LastEditors: 陈德立*******419287484@qq.com
  * @Github: https://github.com/Alan1034
  * @Description: LoadingMask
@@ -24,7 +24,7 @@ const visable = ref<boolean>(false)
 import {
   //reactive, defineComponent,
   defineExpose, defineProps, onUnmounted, watch, ref,
-} from 'vue-demi'
+} from 'vue'
 const props = defineProps({
   text: {
     type: [String, Number],
