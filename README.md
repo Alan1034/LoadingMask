@@ -10,8 +10,8 @@
 -->
 # LoadingMask
 
-一个带有动态Loading的遮罩层 <br/>
-A Vue variable loading mask
+一个带有动态Loading的遮罩层，vue2请使用@1版本，Vue3请使用@2版本 <br/>
+A Vue variable loading mask, vue2 please use @1 version, Vue3 please use @2 version
 
 ![image-20211116115258955](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/202111161152173.png)
 
