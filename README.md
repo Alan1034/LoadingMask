@@ -42,3 +42,8 @@ import { AnyMask } from "variable-loading-mask";
 
 安装：npm i variable-loading-mask<br/>
 install: npm i variable-loading-mask
+
+vite:
+import 'variable-loading-mask/style'
+webpack4:
+import 'variable-loading-mask/dist/style.css'
