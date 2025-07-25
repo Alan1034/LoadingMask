@@ -1,7 +1,7 @@
 <!--
  * @Author: 陈德立*******419287484@qq.com
  * @Date: 2021-11-16 10:55:30
- * @LastEditTime: 2025-07-23 11:53:03
+ * @LastEditTime: 2025-07-25 16:59:42
  * @LastEditors: 陈德立*******419287484@qq.com
  * @Github: https://github.com/Alan1034
  * @Description: 
@@ -35,7 +35,7 @@ A Vue variable loading mask
 ```
 import { AnyMask } from "variable-loading-mask";
 
-<AnyMask v-bind:maskVisable.sync="maskVisable" >
+<AnyMask v-bind:maskVisable.sync="visable" >
   <img :src="shop" alt="主页预览"> //自定义的内容
 </AnyMask>
 ```
