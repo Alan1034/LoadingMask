@@ -34,6 +34,7 @@ tools：( Boolean )是否展示关闭按钮，如果为false则变为点击遮�
 ```
 import { loadMaskIns } from "variable-loading-mask";
 import OpenInSysBrowser from '@/assets/img/openInSysBrowser.png'
+import 'variable-loading-mask/style'
 
   const mask = loadMaskIns({ maskType: "any",  imgSlot: {
       src: OpenInSysBrowser,
