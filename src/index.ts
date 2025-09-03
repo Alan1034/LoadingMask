@@ -17,3 +17,7 @@ export const LoadingMask = LoadingMaskCom;
 import loadingMaskMethod from "./method";
 
 export const LoadingMaskIns = loadingMaskMethod;
+
+import AnyMaskCom from "./AnyMask.vue";
+
+export const AnyMask = AnyMaskCom;
