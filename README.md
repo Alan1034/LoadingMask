@@ -25,17 +25,41 @@ A Vue variable loading mask, vue2 please use @1 version, Vue3 please use @2 vers
      :maskVisable="maskVisable" // Boolean
      />
 
+# AnyMask
+
+![image-20211116115258955](https://raw.githubusercontent.com/Alan1034/PicturesServer/main/PicGo_imgs/wechat_2025-09-03_151636_748.png)
+
+tools：( Boolean )是否展示关闭按钮，如果为false则变为点击遮罩层关闭
+
+```
+import { loadMaskIns } from "variable-loading-mask";
+import OpenInSysBrowser from '@/assets/img/openInSysBrowser.png'
+
+  const mask = loadMaskIns({ maskType: "any",  imgSlot: {
+      src: OpenInSysBrowser,
+      alt: '打开系统浏览器',
+      style: { width: '215px', height: '95px', marginLeft: '100px' }
+    }, tools: false });
+  mask.show();
+```
+
+# loadMaskIns
+
 函数式调用：
 
 ```
-import { LoadingMaskIns } from 'variable-loading-mask';
+import { loadMaskIns } from 'variable-loading-mask';
 import 'variable-loading-mask/style'
 
-const mask = LoadingMaskIns({ text: 'percentage' });
+const mask = loadMaskIns({ text: 'percentage' });
 mask.show();
 mask.setText("percentage+n")
 mask.close();
 ```
+
+maskType：（String）loading：LoadingMask；any：AnyMask
+
+
 
 安装：npm i variable-loading-mask<br/>
 install: npm i variable-loading-mask

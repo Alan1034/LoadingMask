@@ -14,9 +14,9 @@ import LoadingMaskCom from "./LoadingMask.vue";
 export const LoadingMask = LoadingMaskCom;
 
 // 函数式调用
-import loadingMaskMethod from "./method";
+import MaskMethod from "./method";
 
-export const LoadingMaskIns = loadingMaskMethod;
+export const loadMaskIns: any = MaskMethod;
 
 import AnyMaskCom from "./AnyMask.vue";
 
